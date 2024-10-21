@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login data</title>
+    <link rel="stylesheet" href="login1.css">
+
+</head>
+<body>
+    <div class="full-page">
+        <div class="navbar">
+            <div>
+                <a href='loginpage.html'></a>
+            </div>
+           
+        </div>
+        <div id='login-form'class='login-page'>
+            <div class="form-box">
+                <div class='button-box'>
+                    <div id='btn'></div>
+                    <button type='button'onclick='login()'class='toggle-btn'>Log In</button>
+                    <button type='button'onclick='register()'class='toggle-btn'>Register</button>
+                </div><form action="E:\xampp\htdocs\website\codes\dash1.html" method="post"></form>
+                <form id='login' class='input-group-login'>
+                    <input type='text'class='input-field'placeholder='Email Id' required="required" >
+            <input type='password'class='input-field'placeholder='Enter Password' required="required">
+            <input type='checkbox'class='check-box'><span>Remember Password</span>
+            <button type='button' onclick='window.location.href="E:/xampp/htdocs/website/home.html"' class="submit-btn";>Login</button>
+
+         </form>
+         <form id='register' class='input-group-register'>
+             <input type='text'class='input-field'placeholder='First Name' required="required">
+             <input type='text'class='input-field'placeholder='Last Name ' required="required">
+             <input type='email'class='input-field'placeholder='Email Id' required="required">
+             <input type='password'class='input-field'placeholder='Enter Password' required="required">
+             <input type='password'class='input-field'placeholder='Confirm Password'  required="required">
+             <input type='checkbox'class='check-box'><span>I agree to the terms and conditions</span>
+                    <button type='submit'class='submit-btn' value="login">Register</button>
+                 
+                  </form>  
+             </form>
+         </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var x=document.getElementById('login');
+        var y=document.getElementById('register');
+        var z=document.getElementById('btn');
+        function register()
+        {
+            x.style.left='-400px';
+            y.style.left='50px';
+            z.style.left='110px';
+        }
+        function login()
+        {
+            x.style.left='50px';
+            y.style.left='450px';
+            z.style.left='0px';
+        }
+    </script>
+</body>
+</html>

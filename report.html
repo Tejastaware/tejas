@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report From Shaurya Motors Pvt.Ltd. | Gulab.com</title>
+    <link rel="stylesheet" href="report.css">
+    <script type="text/javascript">
+        function disp_dtls() {
+            var ar;
+            if (window.XMLHttpRequest) {
+                ar = new XMLHttpRequest();
+            }
+            else {
+                ar = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            ar.onreadystatechange = function () {
+                if (ar.readyState == 4 && ar.status == 200) {
+                    document.getElementById("result").innerHTML = ar.responseText;
+                }
+            }
+            var ele = document.getElementsByName("op");
+            for (i = 0; i < ele.length; i++) {
+                if (ele[i].checked)
+                    var op = ele[i].value;
+            }
+            ar.open("GET", "report1.php ?op=" + op + "", true);
+            ar.send(null);
+        }
+    </script>
+</head>
+<body>
+    <form class="main">
+            
+                <h2>Get Details as Below - </h2>
+                <div class="inputfield">
+                 
+                    <label>Select Appropriate Choice :</label><br>
+                    <input type="radio"  name="op" value="full"> Full Details.<br>
+                <input class="A" type="radio" name="op" value="completed"> <span class="C">Serviced Vehicles.</span><br>
+                <input class="B" type="radio" name="op" value="in-progess"> <span class="D">Service In-Progess Vehicles.</span><br>
+                
+
+                <input class="btn" type="button" value="Submit" onclick="disp_dtls()">
+
+
+           <!--     <label class="AJ">Get Your Vehicle Status :</label><br>
+                    <label class="AS">Vehicle No.- </label>
+                    <input class="AD" type="text" placeholder="eg. MH-12-CC-1925">
+                 </div>
+
+                <input class="btn1" type="button" value="Submit" onclick="disp()">
+                -->
+
+            <h3>
+                <center>
+                <div id="result">Result Will Displayed Here.</div></center>
+    </form> <br><h2>
+    <a href="home.html" style="color: white;">Back To Home</a>
+</body>
+</html>
